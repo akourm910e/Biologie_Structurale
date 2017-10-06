@@ -35,8 +35,7 @@ In this study, running time and used memory will be mesured and will allow us to
 
 All of those methods are available to compute FFT. The question now is to know which of those methods and which implementation of it will be the more efficient. To answer it, we will use Benchmarking, more precisely Micro-Benchmarking. The Benchmark consists in knowing the relative performance of a program while running it. Factors such as the used resources like the memory and CPU will be mesured. The values obtained are then compared to other programs with the same purpose. It allow the developper to see if his algorithm and implementation are an improvement compared to the references. Micro Benchmarking is a specific Benchmark. The difference is that Micro Benchmark just mesure the performances of a little piece of code, here we compare plugins and not softwares for instance.
 
-In this study, running time and used memory will be mesured and will allow us to compare plugins using different algorithms.
-In theory we are also supposed to compare the use of CPU
+In this study, running time and used memory will be mesured and will allow us to compare plugins using different algorithms. The processor use is compare through the time of execution.
 
 ## Results
 
@@ -71,11 +70,11 @@ To compare the two plugins, it is interesting to study the outputs of the *FFT* 
 Compare the FFT plugins can be done thanks to a quantitative approach using Benchmark, but it is hard to compare it qualitatively. Indeed, it is difficult to know what the FFT of an image should look like. But we can see that the two plugins do not display the same windows, and it is a thing we can compare. We can see that each plugin display two images. The Xlib plugin displays the image of the real part of the embryos and also it's imaginary part. The real part represent the magnitude multiplyed by cosinus phase and the imaginary part the magnitude multiplied by sinus phase. Magnitude is the absolute values of the image frequences, it is obtaines when complex numbers are transformed numbers into a polar representation (magnitude, phase). The phase component of the polar representation varies from pi to -pi. The preibisch displays the power and the phase spectra. The power is the square of magnitude of FFT and give us a similar pattern that the real part of the Xlib plugin and the basis ImageJ FFT. The phase tells us where is the frequency in the image. Real/imaginary and power/phase are two different ways to represent FFT spectrum. One way is not better than another, but in both cases, the outputs are complementary and necessary to get back the image with the inverse FFT.
 It is interesting to notice that the Preibisch plugin just displays half of the FFT show by Xlib plugin. It is not a problem because half is enough because the FFT is similar about the origin: first quadrant is similar to the third and the second to the fourth.
 
-![Alt text](https://github.com/Nine-s/Biologie_Structurale/blob/master/Images/logTime.png "Reference Image")
-*Figure 1: Output of ////// plugin showing the phase spectrum of the image*
+![Alt text](https://github.com/Nine-s/Biologie_Structurale/blob/master/Images/logTime.png "Time Benchmark result")
+*Figure 1: Box plot comparing the running time of the two plugins. Here, the "Function1" is Xlib plugin and the second one is the Bluestein*
 
-![Alt text](https://github.com/Nine-s/Biologie_Structurale/blob/master/Images/Plotmemory.png "Reference Image")
-*Figure 1: Output of ////// plugin showing the power spectrum of the image*
+![Alt text](https://github.com/Nine-s/Biologie_Structurale/blob/master/Images/Plotmemory.png "Memory Benchmark result")
+*Figure 1: Box plot comparing the memory usage of the two plugins. Here, the "Function1" is Xlib plugin and the second one is the Bluestein*
 
 Those comparisons have been done on a computer with a those caracteristics :
 * Processor : Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
