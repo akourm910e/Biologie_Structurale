@@ -1,5 +1,7 @@
 # The Fast Fourier Transform
 
+Authors : * De Mecquenem Ninon, Grosjean Léo, Kourmanalieva Antoine
+
 Here you can find the link to our Github containing further information : https://github.com/Nine-s/Biologie_Structurale
 
 ## Introduction
