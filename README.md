@@ -63,23 +63,23 @@ To compare the two plugins, it is interesting to study the outputs of the *FFT* 
 
 
 ![Alt text](https://github.com/Nine-s/Biologie_Structurale/blob/master/Images/beat_FFT2D_real_no%20scal.jpg "Output 2 of *Xlib* plugin")
-*Figure 1: Output of *Xlib* plugin showing the real part of the image*
+*Figure 3: Output of *Xlib* plugin showing the real part of the image*
 
 
 ![Alt text](https://github.com/Nine-s/Biologie_Structurale/blob/master/Images/fft_Phase_of_img.jpg "Output 1 of *Preibisch* plugin")
-*Figure 1: Output of *Preibisch* plugin showing the phase spectrum of the image*
+*Figure 4: Output of *Preibisch* plugin showing the phase spectrum of the image*
 
 ![Alt text](https://github.com/Nine-s/Biologie_Structurale/blob/master/Images/fft_Power_of_img_embryos.jpg "Output 2 of *Preibisch* plugin")
-*Figure 1: Output of *Preibisch* plugin showing the power spectrum of the image*
+*Figure 5: Output of *Preibisch* plugin showing the power spectrum of the image*
 
 Compare the FFT plugins can be done thanks to a quantitative approach using Benchmark, but it is hard to compare it qualitatively. Indeed, it is difficult to know what the FFT of an image should look like. But we can see that the two plugins do not display the same windows, and it is a thing we can compare. We can see that each plugin display two images. The *Xlib* plugin displays the image of the real part of the embryos and also it's imaginary part. The real part represent the magnitude multiplied by cosinus phase and the imaginary part the magnitude multiplied by sinus phase. Magnitude is the absolute values of the image frequences, it is obtained when complex numbers are transformed into a polar representation (magnitude, phase). The phase component of the polar representation varies from *pi* to *-pi*. The *Preibisch* plugin displays the power and the phase spectra. The power is the square of magnitude of FFT and gives us a similar pattern that the real part of the *Xlib* plugin and the basis ImageJ FFT. Real/imaginary and power/phase are two different ways to represent FFT spectrum. One way is not better than another, but in both cases, the outputs are complementary and necessary to get back on the image with the inverse FFT.
 It is interesting to notice that the *Preibisch* plugin just displays half of the FFT show by *Xlib* plugin. It is not a problem because half is enough because the FFT is similar about the origin: first quadrant is similar to the third and the second to the fourth.
 
 ![Alt text](https://github.com/Nine-s/Biologie_Structurale/blob/master/Images/logTime.png "Time Benchmark result")
-*Figure 1: Box plot comparing the running time of the two plugins. Here, the "Function1" is *Xlib* plugin and the second one is the Bluestein's plugin*
+*Figure 6: Box plot comparing the running time of the two plugins. Here, the "Function1" is *Xlib* plugin and the second one is the Bluestein's plugin*
 
 ![Alt text](https://github.com/Nine-s/Biologie_Structurale/blob/master/Images/Plotmemory.png "Memory Benchmark result")
-*Figure 1: Box plot comparing the memory usage of the two plugins. Here, the "Function1" is *Xlib* plugin and the second one is the Bluestein's plugin*
+*Figure 7: Box plot comparing the memory usage of the two plugins. Here, the "Function1" is *Xlib* plugin and the second one is the Bluestein's plugin*
 
 Those comparisons have been done on a computer with a those caracteristics :
 * Processor : Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
