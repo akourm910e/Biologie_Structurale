@@ -99,8 +99,9 @@ Between the two plugins tested, Micro-Benchmarking showed that the one developed
 Another point is that we searched for plugins running only on ImageJ software, reducing the amount of avalaible programs. It would be interesting to look on FFT plugins included in other image processing softwares, such as cell-profiler (Biology, Microscopy), FTL-SE (Crystallography) or MatLab(Numerical Computing).
 
 ## Conclusion
-récap résult+Discussion
-en ouv parler de la suite du projet
+It has been shown here that there are many FFT algorithms existing, all treating different cases, and are usefull in different domains.This is not surprising, as the FFT is an important mathematical breakthrough, and is probably one the most widespreaded tool in image processing.
+From this study, it appears that the Cooley & Tukey algorithm is more efficient than Bluestein's algorithm to process a FFT. As our benchmark focuses on running speed and memory used, it doesn't deny the fact that Bluestein's algorithm can be usefull in some specific process. The lack of existing plugins running on ImageJ triggered the impossibility to test the efficiency of all the described algorithms.
+Now that we know which algorithm is apparently the most efficient, the next steps will be to develop it with functional programing thanks to Vanilla JavaScript. Finally, we will implement it using a WebGL library and test it on a web browser.
 
 ## References
 
