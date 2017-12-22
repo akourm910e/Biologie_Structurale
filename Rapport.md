@@ -3,11 +3,12 @@ Antoine Kourmanalieva, Ninon De Mecquenem and Leo Grosjean.
 
 ## Introduction 
 
-Image segmentation segments a digital image based on a certain characteristic of the pixels is a well-known technique. The goal is to turn a grayscale image into a binary image, classifying each pixel into one of two categories, such as "dark" or "white". The most basic threshold technique is to choose a threshold value and compare each pixel to that value. Starting of this principle, many of thresholding methods have been developed. Among them, there are two main categories :  global thresholding, where a single threshold is used throughout the image to be divided into two classes and local thresholding, where the threshold values are determined locally, pixel by pixel or region by region. Three of four algorithm that will be presented Otsu, K-means and Entropie are part of the global thresholding category and are histogram based-methods. While the fourth algorithm, adaptive threshold is part of the local thresholding category and is based on the used of a kernel that runs through the image.
+Jean Baptiste Joseph Fourier is a XIXth century mathematician known for his work about warm propagation. His study leads him to transform any function of a variable in a series of periodic functions (Fourier series).[^FOU1822] Even if his work is uncomplete, this has been a breakthrough and it is just later, thanks to Joseph Louis Lagrange and Peter Gustav Lejeune Dirichlet, that the Fourier Transform became what we currently know. The Fourier Transform is now a powerfull tool in image processing. It converts images from their spacial domain to the frequential domain without loss of information. The Fast Fourier Transform (FFT) algorithm computes the Discrete Fourier Transform (DFT) which is a mathematical tool revealing periodicity in data. The DFT is used in many domains and is quite slow to compute. The improvement of the FFT is to compute it more efficiently : N^2 operations in DFT and nlogn operations for FFT.
+
 
 ## 1. Materiel and methods
 
-### 1.1 FFT - Cooley-Tukey algorithm.  
+### 1.1 FFT - Cooley-Tukey algorithm (1805/Gauss, Widespread 1965/Cooley&Tukey).  
 
 The Cooley-Tukey algorithm is the most common Fast Fourier Transform (FFT) algorithm. It uses general technique of divide and conquer algorithms. 
 The algorithm breaks the Discrete Fourier Transform(DFT) into smaller DFTs, to perform recursively the FFT to reduce the computation time to O(N log N) for highly composite N. 
@@ -17,18 +18,25 @@ Formula of DFT :
 
 Cooley-Tukey algorithm pseudocode: 
 '''
-X0,...,N−1 ← ditfft2(x, N, s):             DFT of (x0, xs, x2s, ..., x(N-1)s):
+DFT of (x0, xs, x2s, ..., x(N-1)s):
+    trivial size-1 DFT base case
+    DFT of (x0, x2s, x4s, ...)
+    DFT of (xs, xs+2s, xs+4s, ...)
+    combine DFTs of two halves into full DFT:
+
+X0,...,N−1 ← ditfft2(x, N, s):             
     if N = 1 then
-        X0 ← x0                                      trivial size-1 DFT base case
+        X0 ← x0                                      
     else
-        X0,...,N/2−1 ← ditfft2(x, N/2, 2s)             DFT of (x0, x2s, x4s, ...)
-        XN/2,...,N−1 ← ditfft2(x+s, N/2, 2s)           DFT of (xs, xs+2s, xs+4s, ...)
-        for k = 0 to N/2−1                           combine DFTs of two halves into full DFT:
+        X0,...,N/2−1 ← ditfft2(x, N/2, 2s)             
+        XN/2,...,N−1 ← ditfft2(x+s, N/2, 2s)           
+        for k = 0 to N/2−1                           
             t ← Xk
             Xk ← t + exp(−2πi k/N) Xk+N/2
             Xk+N/2 ← t − exp(−2πi k/N) Xk+N/2
         endfor
     endif
+    
 
 '''
 The simple form of the algorithm uses a radix-2 decimation-in-time (DIT) FFT.
