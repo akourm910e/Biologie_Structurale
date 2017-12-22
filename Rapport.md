@@ -18,14 +18,6 @@ Formula of DFT :
 ![Alt text](https://github.com/akourm910e/Biologie_Structurale/blob/master/fDFT.png "Cooley-Tukey algorithm pseudocode")
 
 Cooley-Tukey algorithm pseudocode: 
-DFT of (x0, xs, x2s, ..., x(N-1)s):
-trivial size-1 DFT base case
-DFT of (x0, x2s, x4s, ...)
-DFT of (xs, xs+2s, xs+4s, ...)
-combine DFTs of two halves into full DFT
-
-
- 
 ```
 X0,...,N−1 ← ditfft2(x, N, s):             
     if N = 1 then
