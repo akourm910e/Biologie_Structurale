@@ -1,5 +1,5 @@
 # Implementation of Fast Fourier Transform
-Antoine Kourmanalieva, Ninon De Mecquenem and Leo Grosjean. 
+Ninon De Mecquenem*, Antoine Kourmanalieva and Leo Grosjean. 
 
 ## Introduction 
 
