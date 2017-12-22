@@ -22,8 +22,11 @@ DFT of (x0, xs, x2s, ..., x(N-1)s):
 trivial size-1 DFT base case
 DFT of (x0, x2s, x4s, ...)
 DFT of (xs, xs+2s, xs+4s, ...)
-combine DFTs of two halves into full DFT:
+combine DFTs of two halves into full DFT
 
+
+ 
+```
 X0,...,N−1 ← ditfft2(x, N, s):             
     if N = 1 then
         X0 ← x0                                      
@@ -36,7 +39,7 @@ X0,...,N−1 ← ditfft2(x, N, s):
             Xk+N/2 ← t − exp(−2πi k/N) Xk+N/2
         endfor
     endif
-    
+```   
 
 The simple form of the algorithm uses a radix-2 decimation-in-time (DIT) FFT.
 Radix-2 DIT first computes the DFTs of the even-indexed array of pixel values array , and of the odd-indexed of pixel values array and then combines those two results to produce the DFT of the whole sequence. This idea can then be performed recursively to reduce the overall runtime to O(N log N). This simplified form assumes that N is a power of two.
