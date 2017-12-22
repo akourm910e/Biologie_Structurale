@@ -15,7 +15,7 @@ The algorithm breaks the Discrete Fourier Transform(DFT) into smaller DFTs, to p
 
 Formula of DFT : 
 
-![Alt text](https://github.com/akourm910e/Biologie_Structurale/blob/master/fDFT.png "Cooley-Tukey algorithm pseudocode")
+![Formula](https://github.com/akourm910e/Biologie_Structurale/blob/master/fDFT.png "Cooley-Tukey algorithm pseudocode")
 
 Cooley-Tukey algorithm pseudocode: 
 ```
@@ -37,7 +37,7 @@ The simple form of the algorithm uses a radix-2 decimation-in-time (DIT) FFT.
 Radix-2 DIT first computes the DFTs of the even-indexed array of pixel values array , and of the odd-indexed of pixel values array and then combines those two results to produce the DFT of the whole sequence. This idea can then be performed recursively to reduce the overall runtime to O(N log N). This simplified form assumes that N is a power of two.
 The algorithm gains its speed by re-using the results of intermediate computations to compute multiple DFT outputs.
 
-Programm summary:
+Workflow:
 
 1. get pixel values.
 2. separe even-indexed and odd-indexed pixel values of array.
