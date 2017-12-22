@@ -18,7 +18,6 @@ Formula of DFT :
 ![Alt text](https://github.com/akourm910e/Biologie_Structurale/blob/master/fDFT.png "Cooley-Tukey algorithm pseudocode")
 
 Cooley-Tukey algorithm pseudocode: 
-'''
 DFT of (x0, xs, x2s, ..., x(N-1)s):
     trivial size-1 DFT base case
     DFT of (x0, x2s, x4s, ...)
@@ -39,7 +38,6 @@ X0,...,N−1 ← ditfft2(x, N, s):
     endif
     
 
-'''
 The simple form of the algorithm uses a radix-2 decimation-in-time (DIT) FFT.
 Radix-2 DIT first computes the DFTs of the even-indexed array of pixel values array , and of the odd-indexed of pixel values array and then combines those two results to produce the DFT of the whole sequence. This idea can then be performed recursively to reduce the overall runtime to O(N log N). This simplified form assumes that N is a power of two.
 The algorithm gains its speed by re-using the results of intermediate computations to compute multiple DFT outputs.
