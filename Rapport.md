@@ -15,7 +15,7 @@ The algorithm breaks the Discrete Fourier Transform(DFT) into smaller DFTs, to p
 
 Formula of DFT : 
 
-![Formula](https://github.com/akourm910e/Biologie_Structurale/blob/master/fDFT.png "Cooley-Tukey algorithm pseudocode")
+(https://github.com/akourm910e/Biologie_Structurale/blob/master/fDFT.png)
 
 Cooley-Tukey algorithm pseudocode: 
 ```
