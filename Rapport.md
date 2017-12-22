@@ -13,7 +13,7 @@ The Cooley-Tukey algorithm is the most common Fast Fourier Transform (FFT) algor
 The algorithm breaks the Discrete Fourier Transform(DFT) into smaller DFTs, to perform recursively the FFT to reduce the computation time to O(N log N) for highly composite N. 
 
 Formula of DFT : 
-<center><img src="img/fDFT.png"></center>  
+<center><img src="fDFT.png"></center>  
 
 Cooley-Tukey algorithm pseudocode: 
 '''
