@@ -44,8 +44,7 @@ function fft(raster, copy=true)
 {
 	var pixelData = raster;
 									  // get pixel values array
-	var N = pixelData.length; 	
-	;		// get pixel value array length
+	var N = pixelData.length; 			      		// get pixel value array length
 	if( N <= 1 ){
 		return pixelData;
 	}
