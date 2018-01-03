@@ -44,11 +44,16 @@ Workflow:
 3. Perform the radix2 DIT.
 4. return pixel values.
 
-### 1.2 Fast Hartley Transform 
+### 1.2 Fast Hartley Transform
+### 1.3 Fast Fourier Transform (Numerical recipe)
 
 
-
- ## Results
+## 2.Results
+ 
+ ### Benchmark
+ ### 2.1 Fast Fourier Transform (Cooley and Tukey)
+ ### 2.2 Fast Hartley Transform
+ ### 2.3 Fast Fourier Transform (Numerical recipe)
 
 
 
