@@ -45,7 +45,7 @@ Workflow:
 4. return pixel values.
 
 ### 1.2 Fast Hartley Transform
-### 1.3 Fast Fourier Transform (Numerical recipe)
+### 1.3 Fast Fourier Transform (Numerical recipe)
 
 
 ## 2.Results
