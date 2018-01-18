@@ -122,6 +122,18 @@ function getMagnitude(){
 
 }
 
+
+/**
+ * Fast Hartley Transform
+ * 
+ * fht() -- perform fht
+ *
+ * @param {raster} image - Input image
+ * @return {array} pixelData - output array 
+ *
+ * @author Ninon de Mecquenem
+ */
+
 function fht(img, copy=true){// boolean inverse, int maxN) {
   var x = img.raster.pixelData;
   var maxN = img.raster.length;
